@@ -31,6 +31,7 @@ export default class OscdOpen extends LitElement {
           (<HTMLInputElement>target).value = '';
         }}
         @change=${this.openDoc}
+        accept=".sed,.scd,.ssd,.isd,.iid,.cid,.icd"
         type="file"
       />
     `;
