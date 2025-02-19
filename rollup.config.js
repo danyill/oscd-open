@@ -1,5 +1,7 @@
 import typescript from '@rollup/plugin-typescript';
 import merge from 'deepmerge';
+import copy from 'rollup-plugin-copy';
+
 // use createSpaConfig for bundling a Single Page App
 // import { createSpaConfig } from '@open-wc/building-rollup';
 
@@ -23,6 +25,12 @@ const baseConfig = createBasicConfig({
 
 export default merge(baseConfig, {
   input: './oscd-open.ts',
-  plugins: [typescript()],
   output: { file: 'dist/oscd-open.js', sourcemap: true, dir: undefined },
+  preserveEntrySignatures: 'strict', // leaves export of the plugin entry point
+  plugins: [
+    copy({
+      targets: [{ src: 'demo/index.deploy.html', dest: 'dist' }],
+    }),
+    typescript(),
+  ],
 });
