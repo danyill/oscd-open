@@ -42,7 +42,7 @@ function t(t,e,r,i){var n,s=arguments.length,o=s<3?e:null===i?i=Object.getOwnPro
       position: fixed;
       --md-circular-progress-size: 48px;
       --md-circular-progress-active-indicator-width: 20;
-      --md-sys-color-primary: var(--oscd-theme-secondary);
+      --md-sys-color-primary: var(--oscd-theme-primary);
 
       left: calc(50vw - 16px);
       top: calc(50vh - 16px);
