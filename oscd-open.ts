@@ -6,7 +6,6 @@ import { newOpenEvent } from '@openenergytools/open-scd-core';
 import '@material/web/progress/circular-progress.js';
 
 const fileTypes = ['cid', 'icd', 'iid', 'isd', 'sed', 'scd', 'ssd'];
-
 export default class OscdOpen extends LitElement {
   @state()
   showProgress: boolean = false;
@@ -63,7 +62,7 @@ export default class OscdOpen extends LitElement {
       position: fixed;
       --md-circular-progress-size: 48px;
       --md-circular-progress-active-indicator-width: 20;
-      --md-sys-color-primary: var(--oscd-theme-secondary);
+      --md-sys-color-primary: var(--oscd-theme-primary);
 
       left: calc(50vw - 16px);
       top: calc(50vh - 16px);
